@@ -1,3 +1,5 @@
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Layout from './components/Layout';
 import Home from './components/Home';
 import Competences from './components/Competences';
@@ -8,14 +10,17 @@ import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <Layout/>
-      <Home />
-      <Competences />
-      <Projects />
-      <Experiences />
-      <Formation />
-    </div>
+    <Router>
+      <Layout>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/competences" element={<Competences />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/experiences" element={<Experiences />} />
+          <Route path="/formation" element={<Formation />} />
+        </Routes>
+      </Layout>
+    </Router>
   );
 }
 

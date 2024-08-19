@@ -1,18 +1,24 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-function Layout() {
-    return (
-      <>
-        <h1>
-          Mon Portfolio Samia B
-        </h1>
-        <a href="#accueil">Accueil</a><br></br>
-        <a href="#projets">Projets</a><br></br>
-        <a href="#experiences">Expériences</a><br></br>
-        <a href="#formation">Formation</a>
-      </>
-    );
-  }
-  
-  export default Layout;
-  
+function Layout({ children }) {
+  return (
+    <>
+      <header>
+        <h1>Mon Portfolio Samia B</h1>
+        <nav>
+          <Link to="/">Accueil</Link><br />
+          <Link to="/competences">Compétences</Link><br />
+          <Link to="/projects">Projets</Link><br />
+          <Link to="/experiences">Expériences</Link><br />
+          <Link to="/formation">Formation</Link>
+        </nav>
+      </header>
+      <main>
+        {children}
+      </main>
+    </>
+  );
+}
+
+export default Layout;
