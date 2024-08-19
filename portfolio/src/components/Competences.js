@@ -1,46 +1,95 @@
 import React from 'react';
+import { Container, Typography, Box, Grid } from '@mui/material';
+import { motion } from 'framer-motion';
+import { FaHtml5, FaCss3Alt, FaReact, FaNodeJs, FaPhp, FaBootstrap, FaDatabase, FaGit, FaLinux, FaJsSquare } from 'react-icons/fa';
+import { SiKubernetes, SiMysql, SiFigma, SiTrello, SiSlack, SiOdoo, SiExpress } from 'react-icons/si';
+
+const icons_competences = {
+  'HTML': <FaHtml5 color="#e34c26" />,
+  'CSS': <FaCss3Alt color="#1572b6" />,
+  'JavaScript (ES6)': <FaJsSquare color="#f7df1e" />,
+  'React': <FaReact color="#61dafb" />,
+  'Node.js': <FaNodeJs color="#8cc84b" />,
+  'PHP': <FaPhp color="#8993be" />,
+  'Bootstrap': <FaBootstrap color="#563d7c" />,
+  'MongoDB': <FaDatabase color="#4db33d" />,
+  'Git': <FaGit color="#f05032" />,
+  'Linux': <FaLinux color="#fcc624" />,
+  'SQL (MySQL)': <SiMysql color="#4479a1" />,
+  'Kubernetes': <SiKubernetes color="#326ce5" />,
+  'Figma': <SiFigma color="#f24e1e" />,
+  'Trello': <SiTrello color="#0079bf" />,
+  'Slack': <SiSlack color="#4a154b" />,
+  'Odoo': <SiOdoo color="#8143ac" />,
+  'Express': <SiExpress color="#000000" />,
+};
 
 const competences = [
-    { title: 'HTML', description: 'Création de pages web structurées avec HTML5' },
-    { title: 'CSS', description: 'Stylisation avancée avec CSS3 et préprocesseurs comme SASS' },
-    { title: 'JavaScript (ES6)', description: 'Développement web avec JavaScript ES6' },
-    { title: 'React', description: 'Développement d’applications interactives avec React' },
-    { title: 'Node.js', description: 'Développement de serveurs et d’API avec Node.js' },
-    { title: 'PHP', description: 'Création de back-ends dynamiques avec PHP' },
-    { title: 'Bootstrap', description: 'Utilisation du framework Bootstrap pour des interfaces responsives et modernes' },
-    { title: 'MongoDB', description: 'Gestion de bases de données NoSQL avec MongoDB' },
-    { title: 'Vim', description: 'Éditeur de texte avancé pour le développement' },
-    { title: 'Vue.js', description: 'Développement d’applications dynamiques avec le framework Vue.js' },
-    { title: 'VS Code', description: 'Environnement de développement intégré de Microsoft' },
-    { title: 'Kubernetes', description: 'Orchestration de conteneurs avec Kubernetes' },
-    { title: 'Git', description: 'Contrôle de version avec Git' },
-    { title: 'Linux', description: 'Système d’exploitation Linux' },
-    { title: 'SQL (MySQL)', description: 'Gestion de bases de données relationnelles avec MySQL' },
-    { title: 'Figma', description: 'Conception de designs avec Figma' },
-    { title: 'Trello', description: 'Gestion de projets avec Trello' },
-    { title: 'Slack', description: 'Communication d’équipe avec Slack' },
-    { title: 'WordPress', description: 'Création de sites web avec WordPress' },
-    { title: 'Odoo', description: 'ERP et CRM avec Odoo' },
-    { title: 'Symfony', description: 'Framework PHP Symfony' },
-    { title: 'Angular', description: 'Développement d’applications avec Angular' },
-    { title: 'Express', description: 'Framework Node.js pour construire des applications web' },
-    { title: 'SEO', description: 'Optimisation pour les moteurs de recherche' },
-  ];
+  'HTML', 'CSS', 'JavaScript (ES6)', 'React', 'Node.js', 'PHP', 
+  'Bootstrap', 'MongoDB', 'Git', 'Linux', 'SQL (MySQL)', 'Kubernetes', 
+  'Figma', 'Trello', 'Slack', 'Odoo', 'Express'
+];
 
-function Competences() {
-    return (
-      <>
-        <h2>Compétences</h2>
-        <ul>
-            {competences.map((competence, index) =>
-                <li key={index}>
-                    <strong>{competence.title}:</strong>{competence.description}
-                </li>
-            )}
-        </ul>
-      </>
-    );
-  }
-  
-  export default Competences;
-  
+const Competences = () => {
+  return (
+    <Container>
+      <Box my={4}>
+        <Typography variant="h4" gutterBottom textAlign="center">
+          Compétences
+        </Typography>
+
+        <Box my={4}>
+          <Typography variant="h5" gutterBottom xs={12} sm={4} md={2}  display="flex" flexDirection="column" alignItems="center">
+            Compétences Clés
+          </Typography>
+          <Grid container spacing={2}>
+            {competences.slice(0, 6).map((title, index) => (
+              <Grid item xs={12} sm={4} md={2} key={index} display="flex" flexDirection="column" alignItems="center">
+                <Box mb={1} sx={{ fontSize: 48 }}>
+                  {icons_competences[title]}
+                </Box>
+                <Typography variant="body2" textAlign="center">
+                  {title}
+                </Typography>
+              </Grid>
+            ))}
+          </Grid>
+        </Box>
+
+        <Box my={4}>
+          <Typography variant="h5" gutterBottom xs={12} sm={4} md={2}  display="flex" flexDirection="column" alignItems="center" >
+            Compétences Supplémentaires
+          </Typography>
+          <Box sx={{ overflow: 'hidden', position: 'relative', height: 150 }}>
+            <motion.div
+              initial={{ x: 0 }}
+              animate={{ x: '-50%' }}
+              transition={{
+                repeat: Infinity,
+                duration: 20,
+                ease: 'linear'
+              }}
+              style={{ 
+                display: 'flex',
+                whiteSpace: 'nowrap'
+              }}
+            >
+              {competences.slice(6).map((title, index) => (
+                <Box key={index} display="flex" flexDirection="column" alignItems="center" sx={{ mx: 2 }}>
+                  <Box mb={1} sx={{ fontSize: 48 }}>
+                    {icons_competences[title]}
+                  </Box>
+                  <Typography variant="body2" textAlign="center">
+                    {title}
+                  </Typography>
+                </Box>
+              ))}
+            </motion.div>
+          </Box>
+        </Box>
+      </Box>
+    </Container>
+  );
+};
+
+export default Competences;
