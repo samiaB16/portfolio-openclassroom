@@ -10,9 +10,9 @@ function Home() {
       <>
         <About />
         <Competences />
-      <Projects />
-      <Experiences />
-      <Formation />
+        <Projects />
+        <Experiences />
+        <Formation />
       </>
     );
   }
