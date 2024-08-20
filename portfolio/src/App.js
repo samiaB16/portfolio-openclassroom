@@ -5,6 +5,7 @@ import About from './components/About';
 import Home from './components/Home';
 import Competences from './components/Competences';
 import Projects from './components/Projects';
+import Project from './components/Project';
 import Experiences from './components/Experiences';
 import Formation from './components/Formation';
 import './App.css';
@@ -18,6 +19,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/competences" element={<Competences />} />
           <Route path="/projects" element={<Projects />} />
+          <Route path="/project/:id" element={<Project />} />
           <Route path="/experiences" element={<Experiences />} />
           <Route path="/formation" element={<Formation />} />
         </Routes>

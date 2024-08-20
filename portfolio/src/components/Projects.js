@@ -1,5 +1,6 @@
 import React from 'react';
 import { Typography, Container, Box, Grid, Paper } from '@mui/material';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import project1 from '../assets/project1.jpg';
 import project2 from '../assets/project2.jpg';
@@ -21,43 +22,45 @@ function Projects() {
           Projets Réalisés
         </Typography>
         <Grid container spacing={4}>
-          {projects.map(({ id, title, image }) => (
-            <Grid item xs={12} sm={6} md={4} key={id}>
-              <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                <Paper
-                  elevation={3}
-                  sx={{
-                    padding: 2,
-                    display: 'flex',
-                    flexDirection: 'column',
-                    justifyContent: 'space-between',
-                    height: '250px',
-                  }}
-                >
-                  <Box
+          {projects.map((project) => (
+            <Grid item xs={12} sm={6} md={4} key={project.id}>
+              <Link to={`/project/${project.id}`} style={{ textDecoration: 'none' }}>
+                <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                  <Paper
+                    elevation={3}
                     sx={{
-                      height: '150px',
-                      overflow: 'hidden',
+                      padding: 2,
                       display: 'flex',
-                      alignItems: 'center',
-                      justifyContent: 'center',
+                      flexDirection: 'column',
+                      justifyContent: 'space-between',
+                      height: '250px',
                     }}
                   >
-                    <img
-                      src={image}
-                      alt={title}
-                      style={{
-                        width: '100%',
-                        height: '100%',
-                        objectFit: 'cover',
+                    <Box
+                      sx={{
+                        height: '150px',
+                        overflow: 'hidden',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
                       }}
-                    />
-                  </Box>
-                  <Typography variant="h6" component="h3" sx={{ mt: 2, textAlign: 'center' }}>
-                    {title}
-                  </Typography>
-                </Paper>
-              </motion.div>
+                    >
+                      <img
+                        src={project.image}
+                        alt={project.title}
+                        style={{
+                          width: '100%',
+                          height: '100%',
+                          objectFit: 'cover',
+                        }}
+                      />
+                    </Box>
+                    <Typography variant="h6" component="h3" sx={{ mt: 2, textAlign: 'center' }}>
+                      {project.title}
+                    </Typography>
+                  </Paper>
+                </motion.div>
+              </Link>
             </Grid>
           ))}
         </Grid>
