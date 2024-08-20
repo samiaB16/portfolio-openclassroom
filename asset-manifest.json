@@ -1,17 +1,23 @@
 {
   "files": {
     "main.css": "/portfolio-openclassroom/static/css/main.964fdded.css",
-    "main.js": "/portfolio-openclassroom/static/js/main.735e7f3e.js",
+    "main.js": "/portfolio-openclassroom/static/js/main.61f90c6a.js",
+    "static/media/image2.jpg": "/portfolio-openclassroom/static/media/image2.e5052a43aa201b0fee26.jpg",
+    "static/media/booki.png": "/portfolio-openclassroom/static/media/booki.d3032595ce95041df6b6.png",
+    "static/media/rse.jpeg": "/portfolio-openclassroom/static/media/rse.09524302e591c8cb2b4a.jpeg",
+    "static/media/listeAction.jpeg": "/portfolio-openclassroom/static/media/listeAction.e986e818b875cf755705.jpeg",
     "static/media/project3.jpg": "/portfolio-openclassroom/static/media/project3.00c3188927083a0e853e.jpg",
+    "static/media/image1.jpg": "/portfolio-openclassroom/static/media/image1.c76a5b8b71235fd4d8a8.jpg",
     "static/media/project1.jpg": "/portfolio-openclassroom/static/media/project1.d193d81588882a18d9cc.jpg",
     "static/media/project2.jpg": "/portfolio-openclassroom/static/media/project2.b2d42e1a2730784f6f30.jpg",
     "static/media/project4.jpg": "/portfolio-openclassroom/static/media/project4.4a74ee4e9454183cb207.jpg",
+    "static/media/sam.jpeg": "/portfolio-openclassroom/static/media/sam.dc7157e05442475e1961.jpeg",
     "index.html": "/portfolio-openclassroom/index.html",
     "main.964fdded.css.map": "/portfolio-openclassroom/static/css/main.964fdded.css.map",
-    "main.735e7f3e.js.map": "/portfolio-openclassroom/static/js/main.735e7f3e.js.map"
+    "main.61f90c6a.js.map": "/portfolio-openclassroom/static/js/main.61f90c6a.js.map"
   },
   "entrypoints": [
     "static/css/main.964fdded.css",
-    "static/js/main.735e7f3e.js"
+    "static/js/main.61f90c6a.js"
   ]
 }
