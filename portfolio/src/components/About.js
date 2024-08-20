@@ -14,7 +14,17 @@ const About = () => {
           <Box component="img" src={myImage} alt="Samia" sx={{ width: 150, height: 150, borderRadius: '50%' }} />
         </motion.div>
         <motion.div initial={{ y: -50 }} animate={{ y: 0 }} transition={{ duration: 1, delay: 0.5 }}>
-          <Typography variant="h2" component="h1" color="primary">
+          <Typography
+            variant="h2"
+            component="h1"
+            color="primary"
+            sx={{ 
+              fontSize: {
+                xs: '40px', 
+                sm: '50px', 
+              }
+            }}
+          >
             Samia B. 
             <br /> Développeuse Full Stack
           </Typography>
