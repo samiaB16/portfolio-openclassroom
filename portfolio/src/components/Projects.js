@@ -8,10 +8,10 @@ import project3 from '../assets/project3.webp';
 import project4 from '../assets/project4.webp';
 
 const projects = [
-  { id: 'outil-ia-numerique-responsable', title: 'Outil d’IA pour le numérique responsable', image: project1 },
-  { id: 'site-web-location-immobiliere', title: 'Site web de location immobilière', image: project2 },
-  { id: 'back-end-evaluation-livres', title: 'Back-end d\'un système d’évaluation de livres', image: project3 },
-  { id: 'design-page-accueil-voyage', title: 'Design d’une page d\'accueil d\'une agence de voyage', image: project4 },
+  { id: 'outil-ia-numerique-responsable', title: 'Outil d’IA pour le numérique responsable', image: project1, alt: 'Interface de l\'outil d’IA pour le numérique responsable' },
+  { id: 'site-web-location-immobiliere', title: 'Site web de location immobilière', image: project2, alt: 'Page d\'accueil du site web de location immobilière' },
+  { id: 'back-end-evaluation-livres', title: 'Back-end d\'un système d’évaluation de livres', image: project3, alt: 'Architecture du back-end pour l’évaluation de livres' },
+  { id: 'design-page-accueil-voyage', title: 'Design d’une page d\'accueil d\'une agence de voyage', image: project4, alt: 'Maquette du design d\'une page d\'accueil pour une agence de voyage'  },
 ];
 
 function Projects() {
@@ -47,7 +47,7 @@ function Projects() {
                     >
                       <img
                         src={project.image}
-                        alt={project.title}
+                        alt={project.alt}
                         style={{
                           width: '100%',
                           height: '100%',

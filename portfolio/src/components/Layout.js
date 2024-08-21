@@ -42,7 +42,7 @@ function Layout({ children }) {
           </Typography>
           {isMobile ? (
             <>
-              <IconButton edge="end" color="inherit" onClick={toggleDrawer(true)} sx={{ ml: 1 }}>
+              <IconButton edge="end" color="inherit" onClick={toggleDrawer(true)} sx={{ ml: 1 }} aria-label='ouverture du menu'>  
                 <MenuIcon />
               </IconButton>
               <Drawer anchor="right" open={drawerOpen} onClose={toggleDrawer(false)}>
@@ -51,7 +51,7 @@ function Layout({ children }) {
             </>
           ) : (
             menuItems.map((item) => (
-              <Button color="inherit" component={Link} to={item.to} key={item.text}>
+              <Button color="inherit" aria-label={item.text} component={Link} to={item.to} key={item.text}>
                 {item.text}
               </Button>
             ))
