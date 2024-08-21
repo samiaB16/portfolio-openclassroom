@@ -15,7 +15,7 @@ function App() {
     <Router>
       <Layout>
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/portfolio-openclassroom" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/competences" element={<Competences />} />
           <Route path="/projects" element={<Projects />} />

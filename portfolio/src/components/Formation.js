@@ -1,8 +1,8 @@
 import React from 'react';
 import { Container, Typography, Box, Paper, Grid } from '@mui/material';
 import { motion } from 'framer-motion';
-import openclassrooms from '../assets/openclassrooms.png';
-import esa from '../assets/esa.png';
+import openclassrooms from '../assets/openclassrooms.webp';
+import esa from '../assets/esa.webp';
 
 const formations = [
   {

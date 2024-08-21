@@ -1,8 +1,8 @@
 import React from 'react';
 import { Container, Typography, Box, Paper, Grid } from '@mui/material';
 import { motion } from 'framer-motion';
-import sg from '../assets/societe-generale.png';
-import agpm from '../assets/agpm.png';
+import sg from '../assets/societe-generale.webp';
+import agpm from '../assets/agpm.webp';
 
 const experiences = [
   {

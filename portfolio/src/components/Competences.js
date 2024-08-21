@@ -44,7 +44,7 @@ const Competences = () => {
           </Typography>
           <Grid container spacing={2}>
             {competences.slice(0, 6).map((title, index) => (
-              <Grid item xs={12} sm={4} md={2} key={index} display="flex" flexDirection="column" alignItems="center">
+              <Grid item xs={12} sm={4} md={2} key={index} display="flex" flexDirection="row" alignItems="center" justifyContent="center">
                 <Box mb={1} sx={{ fontSize: 48 }}>
                   {icons_competences[title]}
                 </Box>
