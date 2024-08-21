@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/portfolio-openclassroom/static/css/main.964fdded.css",
-    "main.js": "/portfolio-openclassroom/static/js/main.ce2e34f8.js",
+    "main.js": "/portfolio-openclassroom/static/js/main.65c0d271.js",
     "static/media/image2.jpg": "/portfolio-openclassroom/static/media/image2.e5052a43aa201b0fee26.jpg",
     "static/media/booki.png": "/portfolio-openclassroom/static/media/booki.d3032595ce95041df6b6.png",
     "static/media/rse.jpeg": "/portfolio-openclassroom/static/media/rse.09524302e591c8cb2b4a.jpeg",
@@ -14,10 +14,10 @@
     "static/media/sam.jpeg": "/portfolio-openclassroom/static/media/sam.dc7157e05442475e1961.jpeg",
     "index.html": "/portfolio-openclassroom/index.html",
     "main.964fdded.css.map": "/portfolio-openclassroom/static/css/main.964fdded.css.map",
-    "main.ce2e34f8.js.map": "/portfolio-openclassroom/static/js/main.ce2e34f8.js.map"
+    "main.65c0d271.js.map": "/portfolio-openclassroom/static/js/main.65c0d271.js.map"
   },
   "entrypoints": [
     "static/css/main.964fdded.css",
-    "static/js/main.ce2e34f8.js"
+    "static/js/main.65c0d271.js"
   ]
 }
