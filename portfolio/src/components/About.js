@@ -20,7 +20,7 @@ const About = () => {
             color="primary"
             sx={{ 
               fontSize: {
-                xs: '40px', 
+                xs: '30px', 
                 sm: '50px', 
               }
             }}
