@@ -3,8 +3,8 @@ import { Container, Typography, Box, Paper, Grid } from '@mui/material';
 import { motion } from 'framer-motion';
 import LazyLoad from 'react-lazyload';
 import myImage from '../assets/sam.webp';
-import image1 from '../assets/image1.webp';
-import image2 from '../assets/image2.webp';
+import image1 from '../assets/sam2.webp';
+import image2 from '../assets/sam1.webp';
 
 const About = () => {
   return (

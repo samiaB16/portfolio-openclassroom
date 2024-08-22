@@ -37,7 +37,7 @@ const Formation = () => {
               >
                 <Paper elevation={3} sx={{ padding: 2 }}>
                 <Box display="flex" alignItems="center" mb={2}>
-                    <img src={formation.logo} alt={`${formation.title} logo`} style={{ width:"90px", height: '60px', marginRight: '16px' }} />
+                    <img src={formation.logo} alt={`${formation.title} logo`} style={{ width:"90px", height: '60px', marginRight: '16px' }} loading="lazy"/>
                     <Box>
                       <Typography variant="h6" component="h3" sx={{ color: '#1976d2' , fontWeight: 'bold' }}>
                         {formation.title}
