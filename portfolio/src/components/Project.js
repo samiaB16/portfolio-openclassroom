@@ -4,7 +4,7 @@ import { Container, Typography, Box, Paper, Link as MUILink } from '@mui/materia
 import project1 from '../assets/project1.webp';
 import project2 from '../assets/project2.webp';
 import project3 from '../assets/project3.webp';
-import project4 from '../assets/booki.webp';
+import project4 from '../assets/booki (1).webp';
 import rse from '../assets/rse.webp';
 import listeAction from '../assets/listeAction.webp';
 import ZoomInIcon from '@mui/icons-material/ZoomIn';
@@ -146,9 +146,9 @@ const Project = () => {
               src={project.image} 
               alt={project.title} 
               style={{ 
-                width: '50%', 
+                width: '100%', 
                 height: '100%', 
-                objectFit: 'cover' 
+                objectFit: 'cover', 
               }} 
             />
           </Box>
