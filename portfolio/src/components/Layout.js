@@ -13,7 +13,7 @@ function Layout({ children }) {
   };
 
   const menuItems = [
-    { text: 'Accueil', to: '/' },
+    { text: 'Accueil', to: '/portfolio-openclassroom' },
     { text: 'À propos', to: '/about' },
     { text: 'Compétences', to: '/competences' },
     { text: 'Projets', to: '/projects' },
