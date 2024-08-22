@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/portfolio-openclassroom/static/css/main.964fdded.css",
-    "main.js": "/portfolio-openclassroom/static/js/main.b619bd43.js",
+    "main.js": "/portfolio-openclassroom/static/js/main.373fb05c.js",
     "static/media/image2.webp": "/portfolio-openclassroom/static/media/image2.ebf3eb2a5ad8e084ffb2.webp",
     "static/media/rse.webp": "/portfolio-openclassroom/static/media/rse.a3141cc9c1be9e4dee27.webp",
+    "static/media/booki.webp": "/portfolio-openclassroom/static/media/booki.f272f3d9b6da6cb9ae62.webp",
     "static/media/listeAction.webp": "/portfolio-openclassroom/static/media/listeAction.0032cf5a0632ce741dbb.webp",
     "static/media/project3.webp": "/portfolio-openclassroom/static/media/project3.973b4ef9a466fc4ebd08.webp",
     "static/media/image1.webp": "/portfolio-openclassroom/static/media/image1.823975e2ab4226320292.webp",
     "static/media/project1.webp": "/portfolio-openclassroom/static/media/project1.110cc9e33de988a3d649.webp",
     "static/media/project2.webp": "/portfolio-openclassroom/static/media/project2.b8b958f52e6d16a56653.webp",
     "static/media/project4.webp": "/portfolio-openclassroom/static/media/project4.118aadaaa11b1c620de1.webp",
-    "static/media/booki (1).webp": "/portfolio-openclassroom/static/media/booki (1).0a22bab5d18222252319.webp",
     "static/media/sam.webp": "/portfolio-openclassroom/static/media/sam.9061c61ae1f404e671ed.webp",
     "static/media/agpm.webp": "/portfolio-openclassroom/static/media/agpm.4c3cafcae66cdfc8393a.webp",
     "static/media/esa.webp": "/portfolio-openclassroom/static/media/esa.c576d6838c13e38d182f.webp",
@@ -18,10 +18,10 @@
     "static/media/societe-generale.webp": "/portfolio-openclassroom/static/media/societe-generale.ca33e76fc7b016338e1a.webp",
     "index.html": "/portfolio-openclassroom/index.html",
     "main.964fdded.css.map": "/portfolio-openclassroom/static/css/main.964fdded.css.map",
-    "main.b619bd43.js.map": "/portfolio-openclassroom/static/js/main.b619bd43.js.map"
+    "main.373fb05c.js.map": "/portfolio-openclassroom/static/js/main.373fb05c.js.map"
   },
   "entrypoints": [
     "static/css/main.964fdded.css",
-    "static/js/main.b619bd43.js"
+    "static/js/main.373fb05c.js"
   ]
 }
