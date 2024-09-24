@@ -8,10 +8,22 @@ import image2 from '../assets/sam1.webp';
 
 const About = () => {
   return (
-    <Container maxWidth="lg" sx={{ mt: 4 }}>
-      <Box display="flex" alignItems="center" mb={4} sx={{ gap: 2 }}>
+    <Container 
+          maxWidth="lg" 
+          sx={{ mt: 4 }}
+          // sx : prop utilisée pour appliquer des styles personnalisés directement sur le composant
+          // mt : margin-top
+          > 
+      <Box 
+          display="flex" 
+          alignItems="center" 
+          mb={4} sx={{ gap: 2 }}
+          // mb: margin-bottom
+          // gap: pour définir l'espace
+          >
         <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1 }}>
           <LazyLoad height={150} offset={100}>
+            {/* offset: déclenche le chargement de l'image 100px avant qu'elle ne soit visible */}
             <Box
               component="img"
               src={myImage}
@@ -44,9 +56,10 @@ const About = () => {
       </Box>
 
       <Typography variant="h4" gutterBottom textAlign="center">
-        À propos de moi
+        Informations
       </Typography>
 
+      // Pour encadrer l'inforrmation: Ajout d un conteneur avec une ombre (elevation) et padding(p)
       <Paper elevation={3} sx={{ p: 4, borderRadius: 2 }}>
         <Grid container spacing={2} alignItems="center">
           <Grid item xs={12} md={4}>

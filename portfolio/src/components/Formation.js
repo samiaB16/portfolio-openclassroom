@@ -23,7 +23,9 @@ const formations = [
 const Formation = () => {  
   return (
     <Container>
-      <Box my={4}>
+      <Box my={4}
+      // my: prop pour définir la marge verticale (top et bottom)
+      >
         <Typography variant="h4" gutterBottom textAlign="center">
           Formation
         </Typography>
@@ -32,7 +34,9 @@ const Formation = () => {
           {formations.map((formation, index) => (
             <Grid item xs={12} key={index}>
               <motion.div
+                // Lorsque l'utilisateur survole l'élément, il sera légèrement agrandi avec un facteur de mise à l'échelle de 1.02
                 whileHover={{ scale: 1.02 }}
+                // Lorsque l'utilisateur clique sur l'élément, il sera légèrement rétréci avec un facteur de mise à l'échelle de 0.98
                 whileTap={{ scale: 0.98 }}
               >
                 <Paper elevation={3} sx={{ padding: 2 }}>

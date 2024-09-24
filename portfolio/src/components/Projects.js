@@ -17,7 +17,9 @@ const projects = [
 function Projects() {
   return (
     <Container>
-      <Box my={4}>
+      <Box my={4}
+      // my: prop pour définir la marge verticale (top et bottom)
+      >
         <Typography variant="h4" gutterBottom textAlign="center">
           Projets Réalisés
         </Typography>
@@ -25,7 +27,11 @@ function Projects() {
           {projects.map((project) => (
             <Grid item xs={12} sm={6} md={4} key={project.id}>
               <Link to={`/project/${project.id}`} style={{ textDecoration: 'none' }}>
-                <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                <motion.div 
+                  // Lorsque l'utilisateur survole l'élément, il sera légèrement agrandi avec un facteur de mise à l'échelle de 1.05
+                  whileHover={{ scale: 1.05 }} 
+                  // Lorsque l'utilisateur clique sur l'élément, il sera légèrement rétréci avec un facteur de mise à l'échelle de 0.95
+                  whileTap={{ scale: 0.95 }}>
                   <Paper
                     elevation={3}
                     sx={{

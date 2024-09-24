@@ -1,26 +1,37 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { AppBar, Toolbar, Typography, Button, IconButton, Drawer, List, ListItem, ListItemText, useMediaQuery, useTheme } from '@mui/material';
+import { AppBar, Toolbar, Typography, Button, IconButton, Drawer, List, ListItem, ListItemText, 
+  useMediaQuery, // Hook pour gérer les requêtes média 
+  useTheme // Hook pour accéder au thème
+} from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 
 function Layout({ children }) {
+  // utilisation d'un hook pour gérer l'état du menu burger (composant Drawer)
   const [drawerOpen, setDrawerOpen] = useState(false);
+
+  // Utilisation du thème Material-UI
   const theme = useTheme();
+
+  // Détermine si l'affichage est sur un écran mobile (small ou plus petit)
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
 
+  // fonction pour ouvrir ou fermer le Drawer
   const toggleDrawer = (open) => () => {
     setDrawerOpen(open);
   };
 
+  // Items de menu pour le Drawer
   const menuItems = [
     { text: 'Accueil', to: '/portfolio-openclassroom' },
-    { text: 'À propos', to: '/about' },
+    { text: 'Info', to: '/about' },
     { text: 'Compétences', to: '/competences' },
     { text: 'Projets', to: '/projects' },
     { text: 'Expériences', to: '/experiences' },
     { text: 'Formation', to: '/formation' },
   ];
 
+  // Contenu du drawer
   const drawer = (
     <div>
       <List>

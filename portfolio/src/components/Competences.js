@@ -3,6 +3,8 @@ import { Container, Typography, Box, Grid } from '@mui/material';
 import { motion } from 'framer-motion';
 import { FaHtml5, FaCss3Alt, FaReact, FaNodeJs, FaPhp, FaBootstrap, FaDatabase, FaGit, FaLinux, FaJsSquare } from 'react-icons/fa';
 import { SiKubernetes, SiMysql, SiFigma, SiTrello, SiSlack, SiOdoo, SiExpress } from 'react-icons/si';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faVuejs } from '@fortawesome/free-brands-svg-icons';
 
 const icons_competences = {
   'HTML': <FaHtml5 color="#e34c26" />,
@@ -22,29 +24,36 @@ const icons_competences = {
   'Slack': <SiSlack color="#4a154b" />,
   'Odoo': <SiOdoo color="#8143ac" />,
   'Express': <SiExpress color="#000000" />,
+  'Vue.js': <FontAwesomeIcon icon={faVuejs} color="#4FC08D"  />,
 };
 
 const competences = [
   'HTML', 'CSS', 'JavaScript (ES6)', 'React', 'Node.js', 'PHP', 
   'Bootstrap', 'MongoDB', 'Git', 'Linux', 'SQL (MySQL)', 'Kubernetes', 
-  'Figma', 'Trello', 'Slack', 'Odoo', 'Express'
+  'Figma', 'Trello', 'Slack', 'Odoo', 'Express', 'Vue.js'
 ];
 
 const Competences = () => {
   return (
     <Container>
-      <Box my={4}>
-        <Typography variant="h4" gutterBottom textAlign="center">
+      <Box my={4}
+      // my: prop pour définir la marge verticale (top et bottom)
+      >
+        <Typography 
+          variant="h4" 
+          gutterBottom
+          // gutterBottom: pour ajouter un espace sous le texte
+          textAlign="center">
           Compétences
         </Typography>
 
         <Box my={4}>
-          <Typography variant="h5" gutterBottom xs={12} sm={4} md={2}  display="flex" flexDirection="column" alignItems="center">
+          <Typography variant="h5" gutterBottom align="center">
             Compétences Clés
           </Typography>
           <Grid container spacing={2}>
             {competences.slice(0, 6).map((title, index) => (
-              <Grid item xs={12} sm={4} md={2} key={index} display="flex" flexDirection="row" alignItems="center" justifyContent="center">
+              <Grid item xs={12} sm={4} md={2} key={index} display="flex" flexDirection="column" alignItems="center">
                 <Box mb={1} sx={{ fontSize: 48 }}>
                   {icons_competences[title]}
                 </Box>
@@ -57,7 +66,7 @@ const Competences = () => {
         </Box>
 
         <Box my={4}>
-          <Typography variant="h5" gutterBottom xs={12} sm={4} md={2}  display="flex" flexDirection="column" alignItems="center" >
+          <Typography variant="h5" gutterBottom align="center">
             Compétences Supplémentaires
           </Typography>
           <Box sx={{ overflow: 'hidden', position: 'relative', height: 150 }}>

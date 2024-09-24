@@ -4,7 +4,7 @@ import { Container, Typography, Box, Paper, Link as MUILink } from '@mui/materia
 import project1 from '../assets/project1.webp';
 import project2 from '../assets/project2.webp';
 import project3 from '../assets/project3.webp';
-import project4 from '../assets/booki.webp';
+import project4 from '../assets/booki (1).webp';
 import rse from '../assets/rse.webp';
 import listeAction from '../assets/listeAction.webp';
 import ZoomInIcon from '@mui/icons-material/ZoomIn';
@@ -23,13 +23,7 @@ const projectDetails = {
         challenge: 'Proposer une liste d\'action pertinente qui tient compte du contexte unique de chaque métier et projet pour des recommandations pertinentes',
         solution: (
           <span>
-            Proposition d'une{' '}          
-            <MUILink href={listeAction} target="_blank" rel="noopener noreferrer">
-              liste d'action
-            </MUILink> et qui s'appuie sur le développement d'un{' '}  
-            <MUILink href={rse} target="_blank" rel="noopener noreferrer">
-              prompt engineering avancé
-            </MUILink>.
+            Proposition d'une liste d action et qui s appuie sur le développement d un prompt engineering avancé.
           </span>
         ),
       },
@@ -112,8 +106,13 @@ const projectDetails = {
 
 const Project = () => {
   const { id } = useParams();
+
+  // utilisation du Hook useState qui initialise la variable d etat (project) à la valeur initiale (null)
+  // fonction setProject permet la mise à jour de cet état
   const [project, setProject] = useState(null);
 
+  // useEffect est un hook qui exécute une fonction après chaque rendu du composant
+  // Ici, il met à jour l'état `project` chaque fois que l'ID change
   useEffect(() => {
     setProject(projectDetails[id]);
   }, [id]);
@@ -145,11 +144,12 @@ const Project = () => {
             <img 
               src={project.image} 
               alt={project.title} 
+              
               style={{ 
                 width: '90%', 
                 height: '100%', 
                 objectFit: 'cover', 
-      
+                loading:'lazy'
               }} 
             />
           </Box>
